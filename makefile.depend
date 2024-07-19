@@ -1,0 +1,12 @@
+crt0.o              :   crt0.s \
+                        apple2.inc iocs.inc
+iocs.o              :   iocs.s iocs.inc \
+                        apple2.inc
+app.o               :   app.s app.inc \
+                        apple2.inc iocs.inc
+game.o              :   game.s game.inc \
+                        apple2.inc iocs.inc app.inc \
+                        lot.inc
+lot.o               :   lot.s lot.inc \
+                        apple2.inc iocs.inc app.inc \
+                        game.inc
